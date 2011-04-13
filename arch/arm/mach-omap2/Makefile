@@ -263,10 +263,16 @@ obj-$(CONFIG_MACH_CM_T3517)		+= board-cm-t3517.o
 obj-$(CONFIG_MACH_IGEP0020)		+= board-igep0020.o
 obj-$(CONFIG_MACH_OMAP3_TOUCHBOOK)	+= board-omap3touchbook.o
 obj-$(CONFIG_MACH_OMAP_4430SDP)		+= board-4430sdp.o \
-					   board-44xx-serial.o \
-					   board-44xx-blaze-touch.o \
-					   board-44xx-blaze-sensors.o \
-					   board-44xx-blaze-keypad.o
+					   hsmmc.o \
+					   omap_phy_internal.o
+obj-$(CONFIG_MACH_OMAP4_PANDA)		+= board-omap4panda.o \
+					   hsmmc.o \
+					   omap_phy_internal.o
+# Android specific board file extensions
+obj-$(CONFIG_MACH_OMAP4_PANDA)		+= board-omap4panda-android.o
+obj-$(CONFIG_MACH_TUNA)			+= board-tuna.o \
+					   hsmmc.o \
+					   omap_phy_internal.o
 
 obj-$(CONFIG_MACH_OMAP_BLAZE)		+= board-44xx-tablet.o \
 					   board-44xx-tablet-panel.o \
