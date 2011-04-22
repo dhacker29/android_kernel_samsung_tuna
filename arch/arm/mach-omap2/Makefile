@@ -274,6 +274,7 @@ obj-$(CONFIG_MACH_TUNA)			+= board-tuna.o \
 					   hsmmc.o \
 					   omap_phy_internal.o
 obj-$(CONFIG_MACH_TUNA)			+= board-tuna-android-usb.o
+obj-$(CONFIG_MACH_TUNA)			+= board-tuna-panel.o
 
 obj-$(CONFIG_MACH_OMAP_BLAZE)		+= board-44xx-tablet.o \
 					   board-44xx-tablet-panel.o \
