@@ -191,6 +191,8 @@ source security/yama/Kconfig
 
 source security/integrity/Kconfig
 
+source security/smc/Kconfig
+
 choice
 	prompt "Default security module"
 	default DEFAULT_SECURITY_SELINUX if SECURITY_SELINUX
