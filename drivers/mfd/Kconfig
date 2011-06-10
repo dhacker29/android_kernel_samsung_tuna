@@ -287,10 +287,21 @@ config TWL6030_POWEROFF
 
 config TWL6030_THERMAL
 	tristate "TWL6030 Thermal Monitoring Support"
+
 	depends on TWL4030_CORE
 	help
 		Say yes if TWL6030 thermal monitoring support is required
 		including HOTDIE configuration and handling.
+
+config TWL6030_MADC
+	tristate "Texas Instruments TWL6030 MADC"
+	depends on TWL4030_CORE
+	help
+	This driver provides support for TWL6030-MADC. The
+	driver supports both RT and SW conversion methods.
+
+	This driver can be built as a module. If so it will be
+	named twl6030-madc
 
 config TWL6040_CORE
 	bool "Support for TWL6040 audio codec"
