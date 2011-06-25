@@ -711,4 +711,11 @@ config INPUT_AK8975
 	help
 	  If you say yes here you get support for AK8975 Digital Compass.
 
+config OPTICAL_GP2A
+	depends on I2C && GENERIC_GPIO
+	tristate "GP2A ambient light and proximity input device"
+	default n
+	help
+	  This option enables proximity & light sensors using gp2a driver.
+
 endif
