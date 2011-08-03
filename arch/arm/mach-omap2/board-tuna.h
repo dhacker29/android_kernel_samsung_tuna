@@ -40,5 +40,6 @@ void omap4_ehci_init(void);
 void modem_toro_init(void);
 
 extern struct mmc_platform_data tuna_wifi_data;
+extern struct class *sec_class;
 
 #endif
