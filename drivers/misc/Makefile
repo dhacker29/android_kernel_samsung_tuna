@@ -66,3 +66,4 @@ obj-$(CONFIG_GCIOCTL)		+= gcx/gcioctl/
 obj-$(CONFIG_CACHE2DMANAGER)	+= cache-2dmanager/
 obj-$(CONFIG_SEC_MODEM)		+= modem_if/
 obj-y				+= inv_mpu/
+obj-$(CONFIG_LEDS_AN30259A)	+= leds-an30259a.o

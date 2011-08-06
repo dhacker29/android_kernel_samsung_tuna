@@ -585,6 +585,15 @@ config CDC_TCXO
 	help
 	  Enable support for Texas Instruments CDC TCXO CDC3S04
 
+config LEDS_AN30259A
+        tristate "LED driver for panasonic AN30259A RGB LED"
+        depends on I2C
+        help
+          This option enables support for AN30259A RGB LED chips
+          accessed via the I2C bus.
+          AN30259A has three channel LED driver. By synchronous clock
+          function, combined operation is possible.
+
 source "drivers/misc/c2port/Kconfig"
 source "drivers/misc/eeprom/Kconfig"
 source "drivers/misc/cb710/Kconfig"
