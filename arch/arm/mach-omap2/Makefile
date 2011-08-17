@@ -282,6 +282,7 @@ obj-$(CONFIG_MACH_TUNA)			+= board-tuna-wifi.o
 obj-$(CONFIG_MACH_TUNA)			+= board-tuna-bluetooth.o \
 					   board-tuna-emif.o
 obj-$(CONFIG_MACH_TUNA)			+= board-tuna-connector.o
+obj-$(CONFIG_MACH_TUNA)			+= board-tuna-pogo.o
 obj-$(CONFIG_MACH_TUNA)			+= board-tuna-usbhost.o
 
 obj-$(CONFIG_MACH_OMAP4_PANDA)		+= board-omap4panda.o
