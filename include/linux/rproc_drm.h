@@ -127,4 +127,13 @@ typedef int (*rproc_drm_invoke_service_t)(enum rproc_service_enum service,
 int rproc_register_drm_service(rproc_drm_invoke_service_t
 			       rproc_drm_invoke_service);
 
+#ifdef CONFIG_SECURITY_MIDDLEWARE_COMPONENT
+int rproc_drm_invoke_service(bool enable);
+#else
+static inline int rproc_drm_invoke_service(bool enable)
+{
+	return -EACCES;
+}
+#endif
+
 #endif /* RPROC_DRM_H */
