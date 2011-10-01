@@ -282,3 +282,19 @@ static int __init omap5_axi_err_init(void)
 	return ret;
 }
 postcore_initcall(omap5_axi_err_init);
+
+#ifndef CONFIG_SECURITY_MIDDLEWARE_COMPONENT
+/*
+ * omap4_sec_dispatcher: Routine to dispatch low power secure
+ * service routines
+ *
+ * @idx: The HAL API index
+ * @flag: The flag indicating criticality of operation
+ * @nargs: Number of valid arguments out of four.
+ * @arg1, arg2, arg3 args4: Parameters passed to secure API
+ *
+ * Return the error value on success/failure
+ */
+u32 omap4_secure_dispatcher(u32 idx, u32 flag, u32 nargs, u32 arg1, u32 arg2,
+							 u32 arg3, u32 arg4)
+#endif

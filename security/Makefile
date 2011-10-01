@@ -26,5 +26,8 @@ obj-$(CONFIG_SECURITY_YAMA)		+= yama/built-in.o
 obj-$(CONFIG_CGROUP_DEVICE)		+= device_cgroup.o
 
 # Object integrity file lists
+<<<<<<< HEAD
 subdir-$(CONFIG_INTEGRITY)		+= integrity
 obj-$(CONFIG_INTEGRITY)			+= integrity/built-in.o
+
+obj-$(CONFIG_SECURITY_MIDDLEWARE_COMPONENT)     += smc/
