@@ -37,7 +37,6 @@
 
 #include <plat/usb.h>
 
-#include "clockdomain.h"
 #include "mux.h"
 #include "board-tuna.h"
 
@@ -793,7 +792,6 @@ static void sii9234_connect(bool on, u8 *devcap)
 	struct tuna_otg *tuna_otg = &tuna_otg_xceiv;
 	unsigned long val;
 	int dock = 0;
-	struct clockdomain *l3_1_clkdm = clkdm_lookup("l3_1_clkdm");
 
 	if (on) {
 		val = USB_EVENT_VBUS;
@@ -818,7 +816,6 @@ static void sii9234_connect(bool on, u8 *devcap)
 	} else {
 		wake_unlock(&sii9234_wake_lock);
 		val = USB_EVENT_NONE;
-		clkdm_allow_idle(l3_1_clkdm);
 	}
 
 	tuna_otg->otg.state = OTG_STATE_B_IDLE;
